@@ -1,0 +1,200 @@
+<!--pages/activity_page/vocal_music/index.wxml-->
+<cu-custom bgColor="bg-dance-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">舞蹈体验课</view>
+</cu-custom>
+<!-- 页面内容 -->
+<view class="body">
+  <view class="banner_box">
+    <image src="{{bannerUrl}}"></image>
+    <view class="bannerTitle">
+      为什么要选择学习声乐？
+    </view>
+    <!-- 第一个盒子内容 -->
+    <view class="content_box1 content_box_style">
+      <view wx:for="{{['connect_icon_realize1','connect_icon_realize2']}}" wx:key="*this" class="connect_icon {{item}}">
+        <view class="dot dot1"></view>
+        <view class="line"></view>
+        <view class="dot dot2"></view>
+      </view>
+      <!-- 文字加底部背景颜色 -->
+      <view class="contentTitle_box">
+        <view class="contentTitle">
+          <text>用肢体语言阐述人生的美</text>
+          <view class="bg"></view>
+        </view>
+      </view>
+      <view class="contentTitle_box">
+        <view class="contentTitle">
+          <text>用舞蹈阐述你生活的态度</text>
+          <view class="bg"></view>
+        </view>
+      </view>
+      <view class="font">
+        想提升品味？想培养气质？想提升技能？想培养爱好？舞蹈是你最好的选择！桔子树为舞蹈小白提供
+        <view class="contentTitle">
+          <text>免费</text>
+          <view class="bg"></view>
+        </view>舞蹈体验课！
+      </view>
+      <view class="image_box">
+        <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/dance/danceImg.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 第二个内容盒子 -->
+  <view class="content_box2 content_box_style">
+    <view wx:for="{{['connect_icon_realize1','connect_icon_realize2']}}" wx:key="*this" class="connect_icon {{item}}">
+      <view class="dot dot1"></view>
+      <view class="line"></view>
+      <view class="dot dot2"></view>
+    </view>
+    <view class="title_block">适合这样的你</view>
+    <view class="info_box" wx:for="{{content2List}}" wx:key="*this">
+      <image src="{{item.imgUrl}}"></image>
+      <view>
+        <view class="title">
+          <view class="circular">
+            <van-icon name="success" />
+          </view>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="detail">
+          {{item.detail}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 第三个盒子 开设课程-->
+  <view class="offeringCourses content_box_style">
+    <view wx:for="{{['connect_icon_realize1','connect_icon_realize2']}}" wx:key="*this" class="connect_icon {{item}}">
+      <view class="dot dot1"></view>
+      <view class="line"></view>
+      <view class="dot dot2"></view>
+    </view>
+    <view class="title_block">开设课程 </view>
+    <view class="type_box">
+      <view class="core">
+        <view>少儿</view>
+        <view>舞蹈</view>
+      </view>
+      <view wx:for="{{['芭蕾','街舞','爵士','古典','民族','拉丁']}}" wx:for-index="i" class="branch branch{{i+1}}" wx:key="*this">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="detail_box">
+      <view class="title">
+        <view class="circular">
+          <van-icon name="success" />
+        </view>
+        <text class="font">开设课程全面</text>
+      </view>
+      <view class="detail_info">
+        对于选择困难症患者、亦或是想了解学习多种类型舞蹈的您，我们一定是最好的选择
+      </view>
+    </view>
+  </view>
+  <!-- 资深教师授课 -->
+  <view class="teacher_info content_box_style">
+    <view wx:for="{{['connect_icon_realize1','connect_icon_realize2']}}" wx:key="*this" class="connect_icon {{item}}">
+      <view class="dot dot1"></view>
+      <view class="line"></view>
+      <view class="dot dot2"></view>
+    </view>
+    <view class="title_block">资深教师授课 </view>
+    <view class="teacher_detail" wx:for="{{tecaherList}}" wx:key="*this">
+      <image src="{{item.imgUrl}}"></image>
+      <view class="teacher_detail_box">
+        <view class="top">
+          <view class="contengtTitle">
+            <text>{{item.name}}</text>
+            <view class="bg"></view>
+          </view>
+          <view class="button" bindtap="rollBottom">马上报名</view>
+        </view>
+        <view class="tecaher_info" wx:for="{{item.detail}}" wx:for-item="info" wx:key="*this">
+          <view class="circular">
+            <van-icon name="success" />
+          </view>
+          <view class="tecaher_info_text">
+            {{info}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 校区信息 -->
+  <view class="campusInformation content_box_style">
+    <view wx:for="{{['connect_icon_realize1','connect_icon_realize2']}}" wx:key="*this" class="connect_icon {{item}}">
+      <view class="dot dot1"></view>
+      <view class="line"></view>
+      <view class="dot dot2"></view>
+    </view>
+    <view class="title_block">校区信息</view>
+    <view class="teacher_detail campus_detail" wx:for="{{campusList}}" wx:key="*this">
+      <image src="{{item.imgUrl}}"></image>
+      <view class="teacher_detail_box">
+        <view class="top">
+          <view class="contengtTitle">
+            <text>{{item.name}}</text>
+            <view class="bg"></view>
+          </view>
+        </view>
+        <view class="campus_info" wx:for="{{item.detail}}" wx:for-item="info" wx:key="*this">
+          <view class="tecaher_info_text">
+            {{info}}
+          </view>
+        </view>
+        <view class="button" bindtap="rollBottom">马上报名</view>
+      </view>
+    </view>
+    <navigator  open-type="switchTab" url="../../campus_page/index"><button class="see_button">查看全部</button></navigator>
+  </view>
+  <!-- 表单 标题 -->
+  <view class="form_title">
+    <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/music/titleBg.png"></image>
+    <view>立即申请试听课</view>
+  </view>
+  <!-- 表单 盒子 -->
+  <view class="form_box content_box_style">
+    <view class="form_border">
+      <view class="form_row">
+        <view class="form_font">
+          课程选择
+        </view>
+        <text class="form_font_d">：</text>
+        <view class="text_input triangle" bind:tap="showPopup">
+          {{formValue_course}}
+        </view>
+      </view>
+      <view class="form_row">
+        <view class="form_font">
+         姓名
+        </view>
+        <text class="form_font_d">：</text>
+        <view class="text_input">
+          <input type="text" placeholder="请输入姓名" model:value="{{formValue_name}}" />
+        </view>
+      </view>
+      <view class="form_row">
+        <view class="form_font">
+          电话
+        </view>
+        <text class="form_font_d">：</text>
+        <view class="text_input" >
+          <input type="number" placeholder="请输入电话号码" maxlength="11" model:value="{{formValue_tel}}"/>
+        </view>
+      </view>
+      <button class="see_button" bind:tap="validateForm">提交</button>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+    <van-picker columns="{{ columns }}" bind:change="onChange" default-index="{{ 1 }}" show-toolbar="{{true}}"
+      bind:confirm="confirm" bind:cancel="cancel" />
+  </van-popup>
+  <van-toast id="van-toast" />
+</view>
+<view class='cu-load load-modal' wx:if="{{loadingShow}}">
+  <image src='../../../assets/homePage/home_active.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>努力加载中...</view>
+</view>

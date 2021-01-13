@@ -1,0 +1,72 @@
+<cu-custom bgColor="bg-gradual-me-orange">
+  <view slot="content">我的</view>
+</cu-custom>
+<!-- 顶部登录 -->
+<view class="top_box" bindtap="clickStop">
+  <view class="circular_box">
+    <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/img.png" class="img1"></image>
+    <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/img.png" class="img2"></image>
+  </view>
+  <view class="content_box">
+    <view class="login_box">
+      <view class="login_btn">
+        <view class="login_font">点击登录</view>
+        <view>桔子树学员</view>
+      </view>
+      <view class="photo_box">
+        <image src="" alt=""></image>
+        <!-- <van-image fit="cover" src="" /> -->
+      </view>
+    </view>
+    <view class="edit_box">
+      编辑个人信息
+      <view class="font_icon">
+        <van-icon name="edit" />
+      </view>
+    </view>
+  </view>
+</view>
+<view class="body">
+  <!-- 课程  卡包 -->
+  <view class="card_box"  bindtap="clickStop"> 
+    <view class="card">
+      <navigator open-type="navigate" url="javascript:vboid(0)" class="a" hover-class="none">
+        <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/course.png"></image>
+        <view class="font">我的课程</view>
+      </navigator>
+    </view>
+    <view class="member">
+      <navigator open-type="navigate" url="javascript:vboid(0)" class="a" hover-class="none">
+        <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/card.png"></image>
+        <view class="font">会员卡</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="menu">
+    <navigator wx:for="{{menuList}}" wx:key="*this" wx:for-index="index"  open-type="navigate" hover-class="none"url="javascript:vboid(0)"  bindtap="clickStop">
+    <view class="row">
+      <view class="left">
+        <image src="{{item.icon}}" class="icon_{{index}} icon_public"></image>
+        <text>{{item.text}}</text>
+      </view>
+      <view class="right">
+        <van-icon name="down" class="arrow" />
+      </view>
+    </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+<!-- <view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
+</view> -->

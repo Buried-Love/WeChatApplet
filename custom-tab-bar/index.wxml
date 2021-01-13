@@ -1,0 +1,34 @@
+
+<view class="fonnter_box">
+	<view class="cu-bar tabbar">
+		<view class="action {{selected === 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+			<view>
+				<image src="{{selected === 0 ? '../assets/homePage/home_active.png' : '../assets/homePage/home.png'}}"></image>
+			</view> 首页
+		</view>
+		<view class="action  {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
+			<view>
+				<image src="{{selected === 1 ? '../assets/homePage/find_active.png' : '../assets/homePage/find.png'}}"></image>
+			</view>
+			发现
+		</view>
+		<view class="action {{selected === 2 ? 'active' : 'default'}}" data-index="2" bindtap="switchTab">
+			<view>
+				<image src="{{selected === 2 ? '../assets/homePage/campus_active.png' : '../assets/homePage/campus.png'}}"></image>
+			</view>
+			校区
+		</view>
+		<view class="action {{selected === 3 ? 'active' : 'default'}}" data-index="3" bindtap="switchTab">
+			<view>
+				<image src="{{selected === 3 ? '../assets/homePage/me_active.png' : '../assets/homePage/me.png'}}"></image>
+			</view>
+			我的
+		</view>
+		<!-- <view class="action {{selected === 4 ? 'active' : 'default'}}" data-index="4" bindtap="switchTab">
+			<view>
+				<image src="{{selected === 4 ? '../assets/homePage/me_active.png' : '../assets/homePage/me.png'}}"></image>
+			</view>
+			我的
+		</view> -->
+	</view>
+</view>

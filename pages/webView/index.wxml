@@ -1,0 +1,3 @@
+<!--pages/webView/index.wxml-->
+<!-- web view h5页面 -->
+<web-view class="web_view" src="{{webUrl}}" hidden="true"></web-view>

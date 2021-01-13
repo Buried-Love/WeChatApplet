@@ -1,0 +1,93 @@
+/* pages/campus_page/index.wxss */
+
+page{
+  background-color: #F6F6F6;
+}
+
+.van-tab{
+  color: #aaa !important;
+  font-size: 30rpx !important;
+}
+.van-tab--active{
+  color: #FFB94A !important;
+  font-size: 32rpx !important;
+  font-weight: bold !important;
+}
+.van-tabs__line{
+  background-color: #FFB94A !important;
+  height: 10rpx !important;
+}
+.van-tabs__wrap{
+  height: 100rpx !important;
+}
+.allBox_style{
+  background-color: #F6F6F6;
+  min-height: 400rpx;
+  padding: 20rpx 34rpx 40rpx 34rpx;
+}
+.campus_box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  padding: 16rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.campus_box>image{
+  width: 208rpx;
+  height: 208rpx;
+}
+.campus_info{
+  width: 410rpx;
+  padding-top: 10rpx;
+}
+.campus_info .title{
+font-weight: bold;
+font-size: 36rpx;
+letter-spacing: 4rpx;
+}
+.msg{
+  text-align: center;
+  height: 160rpx;
+  line-height: 160rpx;
+  background-color: #F6F6F6;
+  font-size: 30rpx;
+}
+.campus_info .font{
+  font-size: 26rpx;
+  letter-spacing: 1rpx;
+  color: #999;
+  margin-top: 14rpx;
+}
+.campus_info .button{
+  width: 175rpx;
+  font-size: 26rpx;
+  border-radius: 40rpx;
+  background-color: #FFF8E9;
+  border: 0px !important;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #FFA81F;
+  float: right;
+  margin-top: 10rpx;
+  letter-spacing: 2rpx;
+  animation: zoom 2s infinite;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.scroll{
+  height: 75vh;
+  padding: 0rpx 0rpx 0rpx 0rpx;
+}

@@ -1,0 +1,65 @@
+<cu-custom bgColor="bg-gradual-orange">
+  <view slot="content">发现</view>
+</cu-custom>
+<!-- 轮播图 -->
+<view class="bodyBox">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{bannerList}}" wx:for-index="index" wx:key="*this">
+      <view  data-url="{{ item.newsUrl }}" bindtap="h5Link">
+        <swiper-item>
+          <image src="{{item.fileUrl}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </view>
+    </block>
+  </swiper>
+  <!-- 栏目title -->
+  <view class='headview'>
+    <text class="titleStyle">线下活动</text>
+  </view>
+  <!-- 线下活动内容 -->
+  <view class="offlineActiv">
+    <view wx:for="{{activityList}}" wx:key="*this" data-url="{{item.newsUrl}}"  bindtap="h5Link">
+      <view class="activeBox">
+        <image src="{{item.fileUrl}}"></image>
+        <view class="title">{{item.title}}</view>
+        <view class="detail">
+          <view class="left">
+            <!-- <van-icon name="location-o" /><text>{{item.place}}</text> -->
+          </view>
+          <view class="right_time">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 栏目title -->
+  <view class='headview'>
+    <text class="titleStyle">最新资讯</text>
+    <!-- <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
+      <van-icon name="arrow" />
+    </navigator> -->
+  </view>
+  <!-- 最新资讯列表 -->
+  <view class="information_box_list">
+    <view wx:for="{{informationList}}" wx:key="*this" data-url="{{item.newsUrl}}"  bindtap="h5Link">
+      <view class="information_box">
+        <image src="{{item.fileUrl}}"></image>
+        <view class="info_box">
+          <view class="title">{{item.title}}</view>
+          <view class="synopsis">
+            {{item.summary}}
+          </view>
+          <view class="time">
+            {{item.activityTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view  style="padding-bottom:70px"></view>
+</view>
+
+<!-- loading -->
+<view class='cu-load load-modal' wx:if="{{loadingShow}}">
+  <image src='../../assets/homePage/home_active.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>努力加载中...</view>
+</view>

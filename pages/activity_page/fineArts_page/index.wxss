@@ -1,0 +1,609 @@
+/* pages/activity_page/vocal_music/index.wxss */
+.body {
+  background-color: #FFC907;
+  padding-bottom: 100rpx;
+}
+
+.banner_box {
+  position: relative;
+  height: auto;
+}
+
+.banner_box image {
+  width: 750rpx;
+  height: 283rpx;
+}
+
+.banner_box .title {
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  letter-spacing: 6rpx;
+  font-weight: bold;
+  position: relative;
+}
+
+.banner_box .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 105rpx;
+  height: 1px;
+  background-color: #333;
+  top: 20rpx;
+  left: 120rpx;
+}
+
+.banner_box .title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 105rpx;
+  height: 1px;
+  background-color: #333;
+  top: 20rpx;
+  right: 120rpx;
+}
+
+.content_box_style {
+  width: 680rpx;
+  height: auto;
+  border: 3px solid #FB8E01;
+  border-radius: 20rpx;
+  background-color: white;
+  margin-left: 35rpx;
+  padding-bottom: 15rpx;
+}
+
+.content_box1 {
+  padding-top: 80rpx;
+  min-height: 400rpx;
+  position: relative;
+  padding-bottom: 0rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #333;
+}
+
+.content_box1 .contengtTitle {
+  display: inline-block;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.content_box1 .contengtTitle .bg {
+  background-color: #FCC826;
+  border-radius: 0rpx;
+  height: 25rpx;
+  width: 100%;
+  margin-left: 0rpx;
+}
+
+.content_box1 .font {
+  font-weight: bold;
+  line-height: 60rpx;
+  padding: 0rpx 60rpx 0rpx 60rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 15rpx;
+}
+
+.content_box1 .font .contengtTitle {
+  line-height: 30rpx;
+}
+
+.brush {
+  position: absolute;
+}
+
+.brush1 {
+  width: 153rpx;
+  height: 167rpx;
+  top: 0rpx;
+  right: -60rpx;
+}
+
+.brush2 {
+  width: 141rpx;
+  height: 213rpx;
+  bottom: -20rpx;
+  left: -40rpx;
+}
+
+.content_box1 .img {
+  display: block;
+  width: 514rpx;
+  height: 324rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.contentTitle {
+  font-size: 35rpx;
+  color: #201DA0;
+  font-weight: bold;
+  margin-top: 15rpx;
+  height: 60rpx;
+  display: inline-block;
+  width: auto;
+}
+
+.bg {
+  background-color: #FFF041;
+  height: 20rpx;
+  width: 106%;
+  border-radius: 20rpx;
+  margin-top: -15rpx;
+  margin-left: -3%;
+}
+
+.content_box2 {
+  margin-top: 20rpx;
+  position: relative;
+  padding: 30rpx 0rpx 40rpx 0rpx;
+}
+
+.content_box2 .info_box {
+  padding: 0rpx 70rpx 0rpx 70rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.content_box2 .info_box image {
+  width: 135rpx;
+  height: 167rpx;
+}
+
+.content_box2 .info_box>view {
+  width: 360rpx;
+  height: 160rpx;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+  color: #333;
+}
+
+.circular {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: #FFF041;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #FC5D26;
+  display: inline-block;
+  margin-right: 25rpx;
+}
+
+.content_box2 .title {
+  display: flex;
+  align-items: center;
+}
+
+.content_box2 .title text {
+  font-weight: bold;
+  font-size: 26rpx;
+  letter-spacing: 4rpx;
+}
+
+.content_box2 .detail {
+  margin-top: 26rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+}
+
+.offeringCourses {
+  margin-top: 40rpx;
+  position: relative;
+  padding-top: 60rpx;
+  padding-bottom: 40rpx;
+}
+
+.type_box {
+  width: 590rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-shadow: #000 4rpx 0 0, #000 0 4rpx 0, #000 -4rpx 0 0, #000 0 -4rpx 0;
+  padding-left: 160rpx;
+}
+
+.core {
+  width: 260rpx;
+  height: 260rpx;
+  background-color: #FFD951;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px #FFD951;
+  text-shadow: #000 6rpx 0 0, #000 0 6rpx 0, #000 -6rpx 0 0, #000 0 -6rpx 0;
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  color: white;
+  z-index: 10;
+  animation: zoom 2s infinite;
+  padding-left: 10rpx;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.cont2_imgBox image{
+  width: 349rpx;
+  height: 359rpx;
+  margin-left: 30rpx;
+  margin-top: -70rpx;
+}
+.core view {
+  text-align: center;
+  width: 100%;
+  letter-spacing: 8rpx;
+  font-weight: bold;
+}
+
+.branch {
+  width: 130rpx;
+  height: 130rpx;
+  background-color: #FFD951;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  letter-spacing: 8rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  color: white;
+  z-index: 1;
+  font-size: 38rpx;
+  padding-left: 10rpx;
+}
+
+.branch::after {
+  content: "";
+  display: block;
+  position: absolute;
+  min-height: 150rpx;
+  width: 3px;
+  background-image: linear-gradient(to bottom, #EE9903 0%, #EE9903 60%, transparent 50%);
+  background-size: 3px 15px;
+  background-repeat: y-repeat;
+  z-index: -1;
+}
+
+.branch1 {
+  top: 10rpx;
+  right: 200rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.branch1::after {
+  top: 100%;
+  height: 90rpx;
+  transform: rotate(-10deg) translateX(10rpx);
+}
+
+.branch2 {
+  top: 50rpx;
+  right: 0rpx;
+}
+
+.branch2::after {
+  top: 50%;
+  transform: rotate(35deg) translateX(10rpx) translateY(40rpx);
+  left: 0rpx;
+}
+
+.branch3 {
+  bottom: 40rpx;
+  right: 0rpx;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.branch3::after {
+  bottom: 100%;
+  left: 0rpx;
+  transform: rotate(-40deg) translateX(-40rpx) translateY(10rpx);
+}
+
+.branch4 {
+  bottom: -180rpx;
+  right: 80rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.branch4::after {
+  height: 330rpx;
+  bottom: 100%;
+  left: 0rpx;
+  transform: rotate(-10deg) translateX(30rpx) translateY(10rpx);
+}
+
+.branch5 {
+  bottom: 80rpx;
+  left: 30rpx;
+  width: 120rpx;
+  height: 120rpx;
+  flex-wrap: wrap;
+}
+
+.branch5::after {
+  bottom: 100%;
+  right: 0rpx;
+  transform: rotate(60deg) translateX(90rpx) translateY(-20rpx);
+}
+
+.branch6 {
+  top: 90rpx;
+  left: 0rpx;
+  width: 170rpx;
+  height: 170rpx;
+  flex-wrap: wrap;
+}
+
+.branch6::after {
+  top: 100%;
+  right: 0rpx;
+  transform: rotate(-60deg) translateX(100rpx) translateY(10rpx);
+}
+
+
+.detail_info {
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 26rpx;
+}
+
+.teacher_info {
+  margin-top: 20rpx;
+  min-height: 400rpx;
+  position: relative;
+  padding-top: 40rpx;
+}
+
+.teacher_detail {
+  width: 90%;
+  height: 280rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed #FFB541;
+}
+
+.teacher_detail>image {
+  width: 210rpx;
+  border-radius: 20rpx;
+  height: 210rpx;
+  box-shadow: 10rpx 10rpx #FC5D26;
+}
+.campus_detail>image{
+  border-radius: 20rpx;
+  box-shadow: 10rpx 10rpx #FC5D26;
+}
+.teacher_detail_box {
+  width: 350rpx;
+  height: 220rpx;
+}
+
+.teacher_detail_box .contengtTitle {
+  display: inline-block;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.teacher_detail_box .top {
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher_detail_box .top .button {
+  height: 48rpx;
+  font-size: 24rpx;
+  padding: 0rpx 20rpx 0rpx 28rpx;
+  line-height: 48rpx;
+  margin: 0;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+  letter-spacing: 6rpx;
+  box-shadow: 1px 2px 1px #FB8E01;
+  background-color: #FCC826;
+  color: white;
+  animation: zoom 2s infinite;
+}
+
+.tecaher_info {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.tecaher_info .circular {
+  margin-top: 6rpx;
+}
+
+.see_button {
+  width: 236rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: #FC5D26;
+  color: white;
+  border-radius: 40rpx;
+  font-weight: bold;
+  letter-spacing: 5rpx;
+}
+
+.campusInformation {
+  margin-top: 30rpx;
+  position: relative;
+  padding-top: 40rpx;
+}
+
+.campusInformation .button {
+  width: 175rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  padding: 0rpx 20rpx 0rpx 28rpx;
+  line-height: 48rpx;
+  margin: 0;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+  letter-spacing: 6rpx;
+  box-shadow: 1px 2px 1px #FB8E01;
+  background-color: #FCC826;
+  color: white;
+  animation: zoom 2s infinite;
+  margin-top: 20rpx;
+}
+
+.campus_info {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.campusInformation .contengtTitle {
+  font-size: 40rpx;
+}
+
+.form_title {
+  width: 720rpx;
+  height: 115rpx;
+  margin: 0 auto;
+  margin-top: 26rpx;
+  position: relative;
+}
+
+.form_title image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.form_title view {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 40rpx;
+  line-height: 110rpx;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5rpx;
+  text-shadow: 0px 3px 3px #FE8B0B;
+}
+
+.form_box {
+  margin-top: 30rpx;
+  height: 500rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px;
+}
+
+.form_border {
+  width: 90%;
+  height: 90%;
+  border-radius: 20rpx;
+  border: dashed 1px #FFB541;
+  padding: 40rpx 20rpx 30rpx 20rpx;
+}
+
+.form_border .font_box {
+  font-size: 36rpx;
+  font-weight: bold;
+  letter-spacing: 3rpx;
+}
+.form_font {
+  width: 130rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.form_font_d {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.form_row {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  padding: 0px 30rpx 0px 30rpx;
+  margin-top: 20rpx;
+}
+
+.text_input {
+  width: 320rpx;
+  height: 50rpx;
+  background-color: #EEEEEE;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  position: relative;
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+}
+
+.triangle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16rpx;
+  right: 60rpx;
+  width: 0px;
+  height: 0px;
+  border-left: 16rpx solid transparent;
+  border-right: 16rpx solid transparent;
+  border-top: 24rpx solid #FC5D26;
+}
+
+.text_input input {
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%；
+}
+
+.form_border .see_button {
+  letter-spacing: 10rpx;
+  margin-top: 50rpx;
+  text-shadow: 1rpx 6rpx 2rpx #044b10;
+}

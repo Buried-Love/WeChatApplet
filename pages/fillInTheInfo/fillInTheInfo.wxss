@@ -1,0 +1,247 @@
+/* 登录 */
+.load_logo {
+  width: 180px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.load_logo .logo_img {
+  width: 100%;
+  height: 100%;
+}
+
+.load_tips {
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* 头部背景图 */
+.theInfo_banner {
+  width: 100%;
+  height: 158px;
+
+}
+
+.theInfo_banner image {
+  width: 100%;
+  height: 100%;
+}
+.class_checkBox_bg {
+  width: 100%;
+  padding: 15px 0;
+  padding-bottom: 18px;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+}
+
+.class_checkBox_bg .title {
+  width: 90.4%;
+  font-size: 30rpx;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.class_checkBox {
+  display: flex;
+  justify-content: space-between;
+  width: 90.4%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.pop_btn {
+  width: 75%;
+  height: 100%;
+  padding: 0;
+  font-size: 14px;
+  color: #555 !important;
+  border: 0px !important;
+}
+/* .iphone_pop_btn{
+  width: 72.5%;
+  height: 30px;
+  margin-right: 6px;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  border: 0.5px solid #05D31a !important;
+  border-radius: 26px;
+  color: #fff !important;
+  background-color: #05D31a !important; 
+} */
+.iphone_pop_btn{
+  width: 74.4%;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  border: none!important;
+}
+
+.btn {
+  width: 90.4%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px auto;
+  border-radius: 26px;
+  color: #fff;
+  transition: 0.2s all;
+  border: 0.5px solid #F50137;
+  background-color: #F50137;
+}
+
+.btn-hover {
+  border: 0.5px solid #F50137;
+  background-color: #FF6184;
+}
+
+switch .wx-switch-input:not([class*="bg-"]) {
+  background: pink !important;
+}
+
+.sex_left {
+  margin-left: 5px;
+}
+
+.class_checkBox_margin {
+  width: 100%;
+  margin: 0;
+}
+
+/* wxss */
+.checkbox {
+  width: 80px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #333;
+  border: 0.8px solid rgba(0, 0, 0, 0.5);
+  border-radius: 26px;
+  display: inline-block;
+  position: relative
+}
+
+.checked {
+  color: #F50137;
+  background: rgba(245, 1, 55, 0.08);
+  border: 1px solid #F50137;
+}
+
+.checkbox checkbox {
+  display: none
+}
+
+.checked-img {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+
+.logo_img {
+  width: calc(129rpx * 1.5);
+  height: calc(60rpx * 1.5);
+  margin: 0 auto;
+}
+
+.logo_img image {
+  width: 100%;
+  height: 100%;
+}
+
+
+.tips {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -20px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 26px;
+  transition: 0.4s all;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.officialBox {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  z-index: 999;
+}
+.officialBan{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.officialAccounts{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0009;
+  z-index: 99;
+}
+.officialAccounts image{
+  position: absolute;
+  width: 110px;
+  height: 250px;
+}
+.officialAccounts .accounts1{
+  left: 10px;
+  top: 380px;
+}
+.officialAccounts .accounts2{
+  left: 50%;
+  margin-left: -55px;
+  top: 380px;
+}
+.officialAccounts .accounts3{
+  right: 10px;
+  top: 380px;
+}
+.sharebutton{
+  right: 30px;
+  top: 160px;
+  width: 100px !important;
+  height: 130px !important;
+  z-index: 100;
+}
+.accTips{
+  position: absolute;
+  left:  0;
+  top: 320px;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+.acc_logo{
+  top: 240px;
+  left: 50%;
+  margin-left: -66px;
+  width: 112px !important;
+  height: 47px !important;
+}
+.occupied{
+  width: 100px;
+  height: 90px;
+}

@@ -1,0 +1,22 @@
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+.tabbar{
+  background-color: #ffffff;
+}
+.bg-cyan{
+  background-color: #cce6ff;
+}
+.active{
+  color: #333;
+}
+.default{
+  color: #AAAAAA;
+}
+image{
+  width: 50rpx;
+  height: 51rpx;
+  margin-bottom: 6rpx;
+}
+.fonnter_box{
+  box-shadow: 0px 0px 18px 5px #0002;
+}

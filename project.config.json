@@ -1,0 +1,100 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "enableEngineNative": false,
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.2",
+  "appid": "wxad693867212cee4d",
+  "projectname": "ColorUI-template",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/fillInTheInfo/fillInTheInfo",
+          "pathName": "pages/fillInTheInfo/fillInTheInfo",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "id": 1,
+          "name": "pages/fillInTheInfo/fillInTheInfo",
+          "pathName": "pages/fillInTheInfo/fillInTheInfo",
+          "query": "marketId=530",
+          "scene": 1011
+        },
+        {
+          "id": -1,
+          "name": "pages/turntable/index",
+          "pathName": "pages/turntable/index",
+          "query": "schoolId=2",
+          "scene": 1011
+        },
+        {
+          "id": -1,
+          "name": "pages/fillInTheInfo/official/index",
+          "pathName": "pages/fillInTheInfo/official/index",
+          "query": "marketId=530",
+          "scene": 1011
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!--pages/campus_page/index.wxml-->
+<cu-custom bgColor="bg-gradual-orange">
+  <view slot="content">校区地址</view>
+</cu-custom>
+<van-tabs active="{{ active }}" bind:change="onChange" swipeable="true" animated="true" lazy-render="true">
+  <van-tab title="全部">
+    <scroll-view scroll-y="true" class="scroll">
+      <view class="msg" wx:if="{{showMsg}}">暂无数据</view>
+      <view class="allBox_style">
+        <view class="campus_box" wx:for="{{allList}}" wx:key="*this">
+          <image src="{{item.fileUrl}}" mode="aspectFill"></image>
+          <!-- {{item.fileUrl}} -->
+          <view class="campus_info">
+            <view class="title">{{item.schoolName}}</view>
+            <view class="font">
+              电 话：{{item.telephone}}
+            </view>
+            <view class="font">
+              地 址：{{item.address}}
+            </view>
+            <view class="button">马上报名</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </van-tab>
+  <van-tab title="北京">
+    <scroll-view scroll-y="true" class="scroll">
+      <view class="msg" wx:if="{{showMsg}}">暂无数据</view>
+      <view class="allBox_style">
+        <view class="campus_box" wx:for="{{bjList}}" wx:key="*this">
+          <image src="{{item.fileUrl}}" mode="aspectFill"></image>
+          <!-- {{item.fileUrl}} -->
+          <view class="campus_info">
+            <view class="title">{{item.schoolName}}</view>
+            <view class="font">
+              电 话：{{item.telephone}}
+            </view>
+            <view class="font">
+              地 址：{{item.address}}
+            </view>
+            <view class="button">马上报名</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </van-tab>
+  <van-tab title="上海">
+    <scroll-view scroll-y="true" class="scroll">
+      <view class="msg" wx:if="{{showMsg}}">暂无数据</view>
+      <view class="allBox_style">
+        <view class="campus_box" wx:for="{{shList}}" wx:key="*this">
+          <image src="{{item.fileUrl}}" mode="aspectFill"></image>
+          <!-- {{item.fileUrl}} -->
+          <view class="campus_info">
+            <view class="title">{{item.schoolName}}</view>
+            <view class="font">
+              电 话：{{item.telephone}}
+            </view>
+            <view class="font">
+              地 址：{{item.address}}
+            </view>
+            <view class="button">马上报名</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </van-tab>
+</van-tabs>
+
+<!-- loading -->
+<view class='cu-load load-modal' wx:if="{{loadingShow}}">
+  <image src='../../assets/homePage/home_active.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>努力加载中...</view>
+</view>

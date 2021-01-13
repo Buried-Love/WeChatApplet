@@ -1,0 +1,89 @@
+<cu-custom bgColor="bg-pink-my" isBack="{{false}}">
+  <view slot="content">{{domTitle}}</view>
+</cu-custom>
+<!-- 轮播展示中奖信息区域 -->
+<!-- <view class='top-banner center'> 
+ <swiper autoplay="{{true}}" interval="{{1500}}" circular="{{true}}" vertical='{{true}}'>
+  <block wx:for="{{prizeInfo}}" wx:key="index">
+   <swiper-item>
+    <view>{{item.name}}{{item.prize}}</view>
+   </swiper-item>
+  </block>
+ </swiper>
+</view> -->
+
+<!-- 获取手机号 -->
+<view class="getiphone" wx:if="{{getiphoneShowL}}">
+  背景盒子
+  <view class="getiphone_in">
+    <view class="getiphoneTips">温馨提醒</view>
+    <view class="getiphoneTitle">请先授权获取手机号</view>
+    <!-- 表单验证 -->
+    <view class="getiphoneInput">
+      <view class="title">手机号</view>
+      <input type="number" placeholder="授权获取或输入号码" maxlength="11" bindinput="bindKeyInputTurn"
+        value="{{phoneNum}}"></input>
+      <!-- 点击获取手机号 -->
+      <button class='iphone_pop_btn' plain="true" open-type='getPhoneNumber'
+        bindgetphonenumber="getPhoneNumber">获取号码</button>
+      <text class="cuIcon-mobilefill text-orange text-xxl"></text>
+    </view>
+    <!-- 确定按钮 -->
+    <button class="btn" hover-class="btn-hover" bindtap="submitClick">确 认</button>
+    <!-- logo -->
+    <view class="iphone_logo">
+      <image src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/logo.png"></image>
+    </view>
+  </view>
+
+</view>
+<!-- 抽奖次数 -->
+<view class="frequency">
+  <view class="text_tips">次数</view>
+  <view class="text_num">{{beEnableNum}}</view>
+</view>
+
+<!-- 漂浮热气球 -->
+<view class="hot_balloon"></view>
+<view class="hot_balloon_below"></view>
+
+<!-- 轮播结束 抽奖转盘 -->
+<view class="lucky_draw_zp" bindtap="getLucky">
+  <!-- 转盘框架 -->
+  <image class="lucky_draw_zp_img"
+    src='https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/turntable/pedestal.png' mode="aspectFit">
+  </image>
+  <!-- 转盘 -->
+  <image style="{{zpRotateDeg}}" class="lucky_draw_main_img"
+    src='https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/turntable/plate.png' mode="aspectFit">
+  </image>
+  <!-- 转盘指针 -->
+  <image class="lucky_draw_zp_btn"
+    src="https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/turntable/pointer.png" mode="aspectFit">
+  </image>
+  <!-- 转盘小人 -->
+  <view class="lucky_draw_person"></view>
+</view>
+
+<!-- 抽奖记录 -->
+<view class="draw_record">
+  <view class="draw_record_title">
+    抽奖记录
+  </view>
+  <view class="draw_record_main">
+    <view class="record_main" wx:for="{{ drawRecordMain }}" wx:for-item="item" wx:key="createTimeText">
+      {{item.createTimeText}} 您获得 {{item.award}}</view>
+    <view class="not_available" wx:if="{{drawRecordMain==null||drawRecordMain.length==0}}"> 暂无抽奖记录~</view>
+  </view>
+</view>
+
+<!-- 恭喜中奖弹窗 -->
+<view class="congratulations" wx:if="{{congratulationsShow}}">
+  <view class="congratulations_title">恭喜中奖!</view>
+  <view class="congratulations_main">{{congratulationsContent}}</view>
+  <View class="congratulations_btn" bindtap="takeClick">开心收下</View>
+</view>
+
+<!-- 占位置 -->
+<view class="occupied">
+</view>

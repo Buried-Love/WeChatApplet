@@ -1,0 +1,90 @@
+<cu-custom bgColor="bg-gradual-orange" isBack="{{false}}">
+  <view slot="content">首页</view>
+</cu-custom>
+<!-- 轮播图 -->
+<view class="bodyBox">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+    <block wx:for="{{bannerList}}" wx:for-index="index" wx:key="*this">
+      <!-- open-type="navigate" url="../webView/index" -->
+      <view  data-url="{{ item.newsUrl }}" bindtap="h5Link">
+        <swiper-item>
+          <image src="{{item.fileUrl}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </view>
+    </block>
+  </swiper>
+  <!-- 栏目title -->
+  <view class='headview'>
+    <text class="titleStyle">课程</text>
+  </view>
+  <!-- 9宫格排版 课程选择 -->
+  <van-grid column-num="2" border="{{ false }}" class="courseBox">
+    <van-grid-item use-slot wx:for="{{ courseList }}" class="image_position" wx:key="*this">
+      <navigator url="{{item.newsShareUrl}}" open-type="navigate" hover-class="none">
+        <image src="{{item.fileUrl}}" />
+      </navigator>
+      <text>{{item.title}}</text>
+    </van-grid-item>
+  </van-grid>
+  <!-- 栏目title -->
+  <view class='headview' style="display:none;">
+    <text class="titleStyle">教学视频</text>
+    <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
+      <!-- <van-icon name="arrow" /> -->
+      <text class="cuIcon-right lg"></text>
+    </navigator>
+  </view>
+  <!-- 教学视频 --->
+  <view class="video_box_list" style="display:none;">
+    <navigator wx:for="{{videoList}}" wx:key="*this" data-url="{{item.pageUrl}}"  bindtap="h5Link">
+      <view class="video_box">
+        <image src="{{item.fileUrl}}"></image>
+        <view class="info_box">
+          <view class="title">{{item.title}}</view>
+          <view class="flag_box">
+            <text>{{item.flag_text}}</text>
+            <text class="flag" wx:if="{{item.flag != ''}}">{{item.flag}}</text>
+          </view>
+          <view class="synopsis">
+            {{item.synopsis}}
+          </view>
+          <view class="time">
+            {{item.time}}
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- 栏目title -->
+  <view class='headview' style="margin-top:40rpx">
+    <text class="titleStyle">最新资讯</text>
+    <!-- <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
+      <text class="cuIcon-right lg"></text>
+    </navigator> -->
+  </view>
+  <!-- 最新资讯列表 -->
+  <view class="information_box_list">
+    <view wx:for="{{informationList}}" wx:key="*this" data-url="{{item.newsUrl}}"  bindtap="h5Link">
+      <view class="information_box">
+        <image src="{{item.fileUrl}}"></image>
+        <view class="info_box">
+          <view class="title">{{item.title}}</view>
+          <view class="synopsis">
+            {{item.summary}}
+          </view>
+          <view class="time">
+            {{item.activityTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view  style="padding-bottom:70px"></view>
+</view>
+
+<!-- loading -->
+<view class='cu-load load-modal' wx:if="{{loadingShow}}">
+  <image src='../../assets/homePage/home_active.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>努力加载中...</view>
+</view>
+
