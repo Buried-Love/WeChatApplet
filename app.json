@@ -4,19 +4,13 @@
     "pages/find_page/index",
     "pages/campus_page/index",
     "pages/myInfo/myInfo",
-    "pages/fillInTheInfo/official/index",
-    "pages/fillInTheInfo/fillInTheInfo",
-    "pages/activity_page/vocal_music/index",
-    "pages/activity_page/dance_page/index",
-    "pages/activity_page/fineArts_page/index",
     "pages/turntable/index",
-    "pages/webView/index",
-    "pages/activity_page/instrumental_music/index"
+    "pages/webView/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "桔子树艺术",
+    "navigationBarTitleText": "Buried",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black"
   },
@@ -43,7 +37,7 @@
         "pagePath": "pages/campus_page/index",
         "iconPath": "/assets/homePage/campus.png",
         "selectedIconPath": "/assets/homePage/campus_active.png",
-        "text": "校区"
+        "text": "列表"
       },
       {
         "pagePath": "pages/myInfo/myInfo",

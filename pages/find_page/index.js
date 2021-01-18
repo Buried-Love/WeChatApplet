@@ -10,10 +10,53 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loadingShow: true,
-    bannerList: [],
-    activityList: [],
-    informationList: []
+    loadingShow: false,
+    bannerList: [
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "newsShareUrl": "../../assets/buried.jpg"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "newsShareUrl": "../../assets/buried.jpg"
+      }
+    ],
+    activityList: [
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "pageUrl": "#"
+      },
+    ],
+    informationList: [
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "summary": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "summary": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "summary": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+    ]
   },
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh();
@@ -43,29 +86,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    homePage().then((res) => {
-      this.setData({
-        bannerList: res.data.bannerList,
-        informationList: res.data.newsList,
-        activityList: res.data.activityList
-      })
-      console.log(res);
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-    }).catch(res => {
-      console.log(res);
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-      wx.showToast({
-        title: `数据读取失败，请稍后再试`,
-        icon: 'none',
-      });
+    // homePage().then((res) => {
+    //   this.setData({
+    //     bannerList: res.data.bannerList,
+    //     informationList: res.data.newsList,
+    //     activityList: res.data.activityList
+    //   })
+    //   console.log(res);
+    //   // 关闭loading
+    //   this.setData({
+    //     loadingShow: false
+    //   })
+    // }).catch(res => {
+    //   console.log(res);
+    //   // 关闭loading
+    //   this.setData({
+    //     loadingShow: false
+    //   })
+    //   wx.showToast({
+    //     title: `数据读取失败，请稍后再试`,
+    //     icon: 'none',
+    //   });
 
-    })
+    // })
   },
 
   /**

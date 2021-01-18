@@ -6,77 +6,121 @@ var secretTool = require('../../libs/secrettool.js')
 //引入接口文件
 var call = require("../../utils/request.js");
 const {
-  homePage, getOpenId
+  homePage,
+  getOpenId
 } = require('../../utils/request');
 //
 Page({
   data: {
-    loadingShow: true,
-    h5Url: "https://api.juzishu.com.cn/news/newsDetail.do?newsId=120",
+    loadingShow: false,
+    h5Url: "#",
     courseList: [{
-      "fileUrl": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/homePage/course1.png",
-      "newsShareUrl": "../activity_page/vocal_music/index",
-      "title": "声乐"
+      "fileUrl": "../../assets/buried.jpg",
+      "newsShareUrl": "#",
+      "title": "标题"
     }, {
-      "fileUrl": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/homePage/course2.png",
-      "newsShareUrl": "../activity_page/fineArts_page/index",
-      "title": "美术"
+      "fileUrl": "../../assets/buried.jpg",
+      "newsShareUrl": "#",
+      "title": "标题"
     }, {
-      "fileUrl": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/homePage/course3.png",
-      "newsShareUrl": "../activity_page/instrumental_music/index",
-      "title": "器乐"
+      "fileUrl": "../../assets/buried.jpg",
+      "newsShareUrl": "#",
+      "title": "标题"
     }, {
-      "fileUrl": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/homePage/course4.png",
-      "newsShareUrl": "../activity_page/dance_page/index",
-      "title": "舞蹈"
+      "fileUrl": "../../assets/buried.jpg",
+      "newsShareUrl": "#",
+      "title": "标题"
     }],
     bannerList: [{
         "fileUrl": "",
-        "newsShareUrl": "../activity_page/vocal_music/index"
+        "newsShareUrl": "../../assets/buried.jpg"
       },
       {
         "fileUrl": "",
-        "newsShareUrl": "../activity_page/vocal_music/index"
+        "newsShareUrl": "../../assets/buried.jpg"
       }
     ],
     videoList: [{
-        "fileUrl": "",
-        "title": "芭蕾舞公开课",
-        "flag_text": "成人一对一",
-        "flag": "热门课程",
-        "synopsis": "爵士舞学习选择橘子树，祝您成为舞蹈达人！",
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "synopsis": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
         "time": "2020-09-01",
-        "pageUrl": "../activity_page/vocal_music/index"
+        "pageUrl": "#"
       },
       {
-        "fileUrl": "",
-        "title": "声乐公开课",
-        "flag_text": "儿童一对一",
-        "flag": "",
-        "synopsis": "爵士舞学习选择橘子树，祝您成为舞蹈达人！",
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "synopsis": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
         "time": "2020-09-01",
-        "pageUrl": "../activity_page/vocal_music/index"
+        "pageUrl": "#"
       },
       {
-        "fileUrl": "",
-        "title": "吉他公开课",
-        "flag_text": "成人一对一",
-        "flag": "热门课程",
-        "synopsis": "爵士舞学习选择橘子树，祝您成为舞蹈达人！",
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "synopsis": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
         "time": "2020-09-01",
-        "pageUrl": "../activity_page/vocal_music/index"
+        "pageUrl": "#"
       },
       {
-        "fileUrl": "",
-        "title": "油画公开课",
-        "flag_text": "成人一对一",
-        "flag": "热门课程",
-        "synopsis": "爵士舞学习选择橘子树，祝您成为舞蹈达人！",
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "列表标题",
+        "flag_text": "副标题",
+        "flag": "标签分类",
+        "synopsis": " 海上生明月，天涯共此时.情人怨遥夜，竟夕起相思。",
         "time": "2020-09-01",
-        "pageUrl": "../activity_page/vocal_music/index"
+        "pageUrl": "#"
       }
     ],
-    informationList: []
+    informationList: [{
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+      {
+        "fileUrl": "../../assets/buried.jpg",
+        "title": "内容标题",
+        "summary": "副标题或内容副标题或内容副标题或内容副标题或内容",
+        "activityTime": "2020-09-01",
+        "pageUrl": "#"
+      },
+
+    ]
   },
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh();
@@ -94,28 +138,28 @@ Page({
     })
   },
   onLoad: function () {
- //同意授权
- wx.login({
-  //获取code 使用wx.login得到的登陆凭证，用于换取openid
-  success: (res) => {
-    console.log(res.code)
-    //调用封装的方法
-    call.getData(`/identity/api/WeChat/WechatInfo?code=${res.code}`, data => {
-      // 判断是否获取到 openid
-      console.log(data)
-      if (data.errorCode == 0) {
-        wx.setStorageSync("openId", data.data.openid)
-      } else {
-        wx.showToast({
-          title: data.message,
-          icon: 'none',
-        });
-      }
-    }, err => {
-      console.log(err)
-    });
-  }
-});
+    // //同意授权
+    // wx.login({
+    //   //获取code 使用wx.login得到的登陆凭证，用于换取openid
+    //   success: (res) => {
+    //     console.log(res.code)
+    //     //调用封装的方法
+    //     call.getData(`/?code=${res.code}`, data => {
+    //       // 判断是否获取到 openid
+    //       console.log(data)
+    //       if (data.errorCode == 0) {
+    //         wx.setStorageSync("openId", data.data.openid)
+    //       } else {
+    //         wx.showToast({
+    //           title: data.message,
+    //           icon: 'none',
+    //         });
+    //       }
+    //     }, err => {
+    //       console.log(err)
+    //     });
+    //   }
+    // });
 
     var oring = {
       "studentId": "111",
@@ -123,30 +167,28 @@ Page({
     }
     var jsonstr = JSON.stringify(oring);
     var newstr = 'partner=1000000&appkey=xxxxx&data=' + jsonstr;
-    // console.log(newstr,md5.md5(newstr));
-    // console.log(secretTool.getSignParmars({ "studentId": "111"}));
     this.getNewsInfo();
-    homePage().then((res) => {
-      this.setData({
-        bannerList: res.data.bannerList,
-        informationList: res.data.newsList
-      })
-      console.log(res)
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-    }).catch(res => {
-      console.log(res);
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-      wx.showToast({
-        title: `数据读取失败，请稍后再试`,
-        icon: 'none',
-      });
-    })
+    // homePage().then((res) => {
+    //   this.setData({
+    //     // bannerList: res.data.bannerList,
+    //     // informationList: res.data.newsList
+    //   })
+    //   console.log(res)
+    //   // 关闭loading
+    //   this.setData({
+    //     loadingShow: false
+    //   })
+    // }).catch(res => {
+    //   console.log(res);
+    //   // 关闭loading
+    //   this.setData({
+    //     loadingShow: false
+    //   })
+    //   wx.showToast({
+    //     title: `数据读取失败，请稍后再试`,
+    //     icon: 'none',
+    //   });
+    // })
   },
   /**
    * 生命周期函数--监听页面显示

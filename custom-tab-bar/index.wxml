@@ -16,7 +16,7 @@
 			<view>
 				<image src="{{selected === 2 ? '../assets/homePage/campus_active.png' : '../assets/homePage/campus.png'}}"></image>
 			</view>
-			校区
+			列表
 		</view>
 		<view class="action {{selected === 3 ? 'active' : 'default'}}" data-index="3" bindtap="switchTab">
 			<view>
@@ -24,11 +24,5 @@
 			</view>
 			我的
 		</view>
-		<!-- <view class="action {{selected === 4 ? 'active' : 'default'}}" data-index="4" bindtap="switchTab">
-			<view>
-				<image src="{{selected === 4 ? '../assets/homePage/me_active.png' : '../assets/homePage/me.png'}}"></image>
-			</view>
-			我的
-		</view> -->
 	</view>
 </view>

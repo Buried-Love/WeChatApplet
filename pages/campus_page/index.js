@@ -10,16 +10,100 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loadingShow: true,
+    loadingShow: false,
     active: 0,
-    allList: [],
-    bjList: [],
-    shList: [],
+    allList: [{
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"我是神圣兽国游尾郡窝窝乡独行族妖侠蛮吉",
+    }],
+    bjList: [
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"应该是天下会的会长，是十佬，是这天下所有的强者，我要干翻的，是这苍穹。",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"应该是天下会的会长，是十佬，是这天下所有的强者，我要干翻的，是这苍穹。",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"应该是天下会的会长，是十佬，是这天下所有的强者，我要干翻的，是这苍穹。",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"应该是天下会的会长，是十佬，是这天下所有的强者，我要干翻的，是这苍穹。",
+    },
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"应该是天下会的会长，是十佬，是这天下所有的强者，我要干翻的，是这苍穹。",
+    }
+    ],
+    shList: [
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"善良的樵夫呦，你定的是这把金斧头，还是这把银斧头？",
+    }
+    ,
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"善良的樵夫呦，你定的是这把金斧头，还是这把银斧头？",
+    }
+    ,
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"善良的樵夫呦，你定的是这把金斧头，还是这把银斧头？",
+    }
+    ,
+    {
+      "fileUrl":"../../assets/buried.jpg",
+      "telephone":"13823888888",
+      "address":"善良的樵夫呦，你定的是这把金斧头，还是这把银斧头？",
+    }
+    ],
     showMsg: false
   },
   onChange(event) {
     wx.showToast({
-      title: `已切换到 ${event.detail.title}校区`,
+      title: `已切换到 ${event.detail.title}列表`,
       icon: 'none',
     });
   },
@@ -27,43 +111,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    getSchoolList().then(res => {
-      this.setData({
-        allList: res.data
-      })
-      let bjSchool = [];
-      let shSchool = [];
-      this.data.allList.map(obj => {
-        if (obj.regionId == 1) {
-          bjSchool.push(obj);
-        } else if (obj.regionId == 2) {
-          shSchool.push(obj);
-        }
-      })
-      this.setData({
-        bjList: bjSchool,
-        shList: shSchool
-      })
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-    }).catch(res => {
-      this.setData({
-        showMsg: true,
-        loadingShow: false
-      })
-      console.log(res);
-      // 关闭loading
-      this.setData({
-        loadingShow: false
-      })
-      wx.showToast({
-        title: `数据读取失败，请稍后再试`,
-        icon: 'none',
-      });
-
-    })
   },
 
   /**

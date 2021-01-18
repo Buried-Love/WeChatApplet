@@ -12,32 +12,32 @@ Page({
     menuList:[
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/opinion.png",
+        "icon": "../../assets/buried.jpg",
         "text": "意见反馈"
       },
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/history.png",
+        "icon": "../../assets/buried.jpg",
         "text": "浏览历史"
       },
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/service.png",
+        "icon": "../../assets/buried.jpg",
         "text": "在线客服"
       },
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/share.png",
+        "icon": "../../assets/buried.jpg",
         "text": "分享"
       },
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/set.png",
+        "icon": "../../assets/buried.jpg",
         "text": "设置"
       },
       {
         "href": "../activity_page/fineArts_page/index",
-        "icon": "https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/signout.png",
+        "icon": "../../assets/buried.jpg",
         "text": "退出登录"
       }
     ]

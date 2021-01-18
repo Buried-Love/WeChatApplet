@@ -28,23 +28,6 @@
   border-radius: 50%;
   z-index: 3;
 } 
-.circular_box image{
-  position: absolute;
-  left: 400rpx;
-  top: 20rpx;
-  width: 136rpx;
-  height: 54rpx;
-}
-.circular_box image:nth-of-type(1){
-  left: 500rpx;
-  top: 40rpx;
-  transform: rotate(100deg) scale(0.8);
-}
-.circular_box image:nth-of-type(2){
-  left: 600rpx;
-  top: 90rpx;
-  transform: scale(1.1);
-}
 .content_box{
   position: absolute;
   width: 100%;
@@ -76,12 +59,13 @@
   align-items: flex-end;
   border-radius: 50%;
   border: 5px solid #fff;
-  background: url("https://juzishu-cms-bucket.oss-cn-beijing.aliyuncs.com/mini-program/img/see.png")no-repeat center;
+  background: url()no-repeat center;
   background-size: 100% 100%;
 }
 .photo_box image{
   width: 150rpx;
-  height: 150rpx; 
+  height: 150rpx;
+  border-radius: 50%;
 }
 .edit_box{
   height: 60rpx;

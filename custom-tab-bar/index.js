@@ -18,7 +18,7 @@ Component({
         "pagePath": "pages/campus_page/index",
         "iconPath": "/assets/homePage/campus.png",
         "selectedIconPath": "/assets/homePage/campus_active.png",
-        "text": "校区"
+        "text": "列表"
       },
       {
         "pagePath": "pages/myInfo/myInfo",

@@ -2,9 +2,7 @@ var app = getApp();
 //项目URL相同部分，减轻代码量，同时方便项目迁移
 //引入域名,test测试,prod正式
 const http = require('./http')
-var host = 'https://api.jzsonline.com'; // 正式服地址
-// var host = 'http://10.1.30.9:10011'; // 本地
-// var host = 'https://tapi.juzishu.com.cn';// 测试服地址
+var host = '#'; // 正式服地址
 /**
  * POST请求，
  * URL：接口
@@ -50,18 +48,16 @@ function getData(url, doSuccess, doFail) {
 //获取openid
 function getOpenId(id) {
   return http({
-    url: 'identity/api/WeChat/WechatInfo?code=' + id,
+    url: '/?code=' + id,
     data: '',
     type: 'GET'
   })
 }
 //获取首页信息
 function homePage() {
-  // api/appNews/getIndexInfo.do?data=%7B"studentId"%3A"0"%2C"time_stamp"%3A"1606209388"%7D&partner=1000000&sign=796a57ab2549425204ff7719f457ee8a 正式服
-  //api/appNews/getIndexInfo.do?data=%7B%22studentId%22%3A%220%22%2C%22time_stamp%22%3A%221606099535%22%7D&partner=1000000&sign=d3dc08dc72aa029f5c81c1a70751c557 测试服
   return new Promise((resolve, reject) => {
     wx.request({
-      url: 'https://api.juzishu.com.cn/api/appNews/getIndexInfo.do?data=%7B"studentId"%3A"0"%2C"time_stamp"%3A"1606209388"%7D&partner=1000000&sign=796a57ab2549425204ff7719f457ee8a',
+      url: '#',
       success(res) {
         resolve(res.data);
       },
@@ -74,14 +70,14 @@ function homePage() {
 //获取校区信息列表
 function getSchoolList() {
   return http({
-    url: 'onlineeducation/api/wechat/getSchoolList',
+    url: '#',
     data: ''
   })
 }
 //提交用户表单信息
 function getUserInfo(user) {
   return http({
-    url: 'onlineeducation/api/studentMarket/marketInformationRecord',
+    url: '#',
     data: {
       'data': {
         marketId: "2586",

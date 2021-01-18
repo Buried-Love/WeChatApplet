@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    webUrl:"https://api.juzishu.com.cn/news/newsDetail.do?newsId=120"
+    webUrl:"#"
   },
 
   /**

@@ -1,6 +1,6 @@
 <!--pages/campus_page/index.wxml-->
 <cu-custom bgColor="bg-gradual-orange">
-  <view slot="content">校区地址</view>
+  <view slot="content">列表</view>
 </cu-custom>
 <van-tabs active="{{ active }}" bind:change="onChange" swipeable="true" animated="true" lazy-render="true">
   <van-tab title="全部">
@@ -11,20 +11,20 @@
           <image src="{{item.fileUrl}}" mode="aspectFill"></image>
           <!-- {{item.fileUrl}} -->
           <view class="campus_info">
-            <view class="title">{{item.schoolName}}</view>
+            <view class="title">{{item.title}}</view>
             <view class="font">
               电 话：{{item.telephone}}
             </view>
             <view class="font">
               地 址：{{item.address}}
             </view>
-            <view class="button">马上报名</view>
+            <view class="button">立即点击</view>
           </view>
         </view>
       </view>
     </scroll-view>
   </van-tab>
-  <van-tab title="北京">
+  <van-tab title="列表1">
     <scroll-view scroll-y="true" class="scroll">
       <view class="msg" wx:if="{{showMsg}}">暂无数据</view>
       <view class="allBox_style">
@@ -45,7 +45,7 @@
       </view>
     </scroll-view>
   </van-tab>
-  <van-tab title="上海">
+  <van-tab title="列表2">
     <scroll-view scroll-y="true" class="scroll">
       <view class="msg" wx:if="{{showMsg}}">暂无数据</view>
       <view class="allBox_style">

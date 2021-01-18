@@ -1,0 +1,63 @@
+<cu-custom bgColor="bg-pink-my" isBack="{{false}}">
+  <view slot="content">抽奖</view>
+</cu-custom>
+<!-- 轮播展示中奖信息区域 -->
+<!-- <view class='top-banner center'> 
+ <swiper autoplay="{{true}}" interval="{{1500}}" circular="{{true}}" vertical='{{true}}'>
+  <block wx:for="{{prizeInfo}}" wx:key="index">
+   <swiper-item>
+    <view>{{item.name}}{{item.prize}}</view>
+   </swiper-item>
+  </block>
+ </swiper>
+</view> -->
+<!-- 抽奖次数 -->
+<view class="frequency">
+  <view class="text_tips">次数</view>
+  <view class="text_num">{{beEnableNum}}</view>
+</view>
+
+<!-- 漂浮热气球 -->
+<view class="hot_balloon"></view>
+<view class="hot_balloon_below"></view>
+
+<!-- 轮播结束 抽奖转盘 -->
+<view class="lucky_draw_zp" bindtap="getLucky">
+  <!-- 转盘框架 -->
+  <image class="lucky_draw_zp_img"
+    src='../../assets/lucky/pedestal.png' mode="aspectFit">
+  </image>
+  <!-- 转盘 -->
+  <image style="{{zpRotateDeg}}" class="lucky_draw_main_img"
+    src='../../assets/lucky/plate.png' mode="aspectFit">
+  </image>
+  <!-- 转盘指针 -->
+  <image class="lucky_draw_zp_btn"
+    src="../../assets/lucky/pointer.png" mode="aspectFit">
+  </image>
+  <!-- 转盘小人 -->
+  <view class="lucky_draw_person"></view>
+</view>
+
+<!-- 抽奖记录 -->
+<view class="draw_record">
+  <view class="draw_record_title">
+    抽奖记录
+  </view>
+  <view class="draw_record_main">
+    <view class="record_main" wx:for="{{ drawRecordMain }}" wx:for-item="item" wx:key="createTimeText">
+      {{item.createTimeText}} 您获得 {{item.award}}</view>
+    <view class="not_available" wx:if="{{drawRecordMain==null||drawRecordMain.length==0}}"> 暂无抽奖记录~</view>
+  </view>
+</view>
+
+<!-- 恭喜中奖弹窗 -->
+<view class="congratulations" wx:if="{{congratulationsShow}}">
+  <view class="congratulations_title">恭喜中奖!</view>
+  <view class="congratulations_main">{{congratulationsContent}}</view>
+  <View class="congratulations_btn" bindtap="takeClick">开心收下</View>
+</view>
+
+<!-- 占位置 -->
+<view class="occupied">
+</view>

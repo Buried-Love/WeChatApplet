@@ -5,12 +5,11 @@
 <view class="bodyBox">
   <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
     <block wx:for="{{bannerList}}" wx:for-index="index" wx:key="*this">
-      <!-- open-type="navigate" url="../webView/index" -->
-      <view  data-url="{{ item.newsUrl }}" bindtap="h5Link">
-        <swiper-item>
-          <image src="{{item.fileUrl}}" class="slide-image" mode="aspectFill" />
+      <view  data-url="{{ item.fileUrl }}" bindtap="h5Link">
+        <swiper-item> 
+          <image src="{{item.newsShareUrl}}" class="slide-image" mode="aspectFill" />
         </swiper-item>
-      </view>
+      </view> 
     </block>
   </swiper>
   <!-- 栏目title -->
@@ -27,7 +26,7 @@
     </van-grid-item>
   </van-grid>
   <!-- 栏目title -->
-  <view class='headview' style="display:none;">
+  <view class='headview'>
     <text class="titleStyle">教学视频</text>
     <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
       <!-- <van-icon name="arrow" /> -->
@@ -35,7 +34,7 @@
     </navigator>
   </view>
   <!-- 教学视频 --->
-  <view class="video_box_list" style="display:none;">
+  <view class="video_box_list">
     <navigator wx:for="{{videoList}}" wx:key="*this" data-url="{{item.pageUrl}}"  bindtap="h5Link">
       <view class="video_box">
         <image src="{{item.fileUrl}}"></image>
@@ -58,9 +57,9 @@
   <!-- 栏目title -->
   <view class='headview' style="margin-top:40rpx">
     <text class="titleStyle">最新资讯</text>
-    <!-- <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
+    <navigator url="../activity_page/vocal_music/index" open-type="navigate" class="right_more">更多
       <text class="cuIcon-right lg"></text>
-    </navigator> -->
+    </navigator>
   </view>
   <!-- 最新资讯列表 -->
   <view class="information_box_list">
